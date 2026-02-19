@@ -1,0 +1,68 @@
+{
+  "name": "mcp-server-github-actions",
+  "version": "1.0.0",
+  "description": "MCP server for GitHub Actions — view workflow runs, read logs, re-run failed jobs, and manage CI/CD from your IDE",
+  "type": "module",
+  "bin": {
+    "mcp-server-github-actions": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint . && prettier --check .",
+    "format": "prettier --write .",
+    "prepare": "husky"
+  },
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "model-context-protocol",
+    "github",
+    "github-actions",
+    "ci-cd",
+    "workflows",
+    "ci",
+    "cd",
+    "ai",
+    "llm",
+    "claude",
+    "cursor"
+  ],
+  "author": "Ofer Shapira",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ofershap/mcp-server-github-actions.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ofershap/mcp-server-github-actions/issues"
+  },
+  "homepage": "https://github.com/ofershap/mcp-server-github-actions#readme",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.26.0",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.0.0",
+    "@types/node": "^22.0.0",
+    "eslint": "^9.0.0",
+    "eslint-config-prettier": "^10.0.0",
+    "husky": "^9.0.0",
+    "lint-staged": "^15.0.0",
+    "prettier": "^3.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.7.0",
+    "typescript-eslint": "^8.0.0",
+    "vitest": "^3.2.0"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js}": "eslint --fix",
+    "*.{json,md,yml,yaml}": "prettier --write"
+  }
+}
