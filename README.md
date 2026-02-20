@@ -6,29 +6,35 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-strict-blue.svg)](https://www.typescriptlang.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Manage GitHub Actions workflows directly from your AI assistant — list runs, read logs, re-run failed jobs, cancel builds, and trigger deployments.
+Manage GitHub Actions workflows from your AI assistant. List runs, read logs, re-run failed jobs, cancel builds, and trigger deployments without leaving your editor.
 
 ```bash
 npx mcp-server-github-actions
 ```
 
-> Works with Claude Desktop, Cursor, VS Code Copilot, and any MCP client. Requires a GitHub token with Actions read/write permissions.
+> Works with Claude Desktop, Cursor, VS Code Copilot, and any MCP client. Requires a GitHub token with Actions permissions.
 
-![Demo](assets/demo.gif)
+![MCP server for GitHub Actions workflows, CI/CD runs, and deployment logs](assets/demo.gif)
+
+<sub>Demo built with <a href="https://github.com/ofershap/remotion-readme-kit">remotion-readme-kit</a></sub>
+
+## Why
+
+GitHub's official MCP server covers repos, issues, and PRs, but it doesn't touch Actions. That means when your CI fails, you still have to open a browser, find the run, click through to the logs, and figure out what went wrong. This server fills that gap. You can ask your assistant "why did the last CI run fail?" or "re-run the failed jobs" and get answers right where you're working. It uses the same GitHub REST API you'd use manually, just without the context switching.
 
 ## Tools
 
 | Tool                | Description                                                  |
 | ------------------- | ------------------------------------------------------------ |
 | `list_workflows`    | List all workflow files in a repository                      |
-| `list_runs`         | List workflow runs (optionally filter by workflow or status) |
+| `list_runs`         | List workflow runs (optionally filter by workflow or status)  |
 | `get_run`           | Get details of a specific workflow run                       |
 | `get_run_logs`      | Get the logs URL for a run (zip file download)               |
 | `rerun_workflow`    | Re-run an entire workflow run                                |
 | `rerun_failed_jobs` | Re-run only the failed jobs from a run                       |
 | `cancel_run`        | Cancel an in-progress or queued run                          |
 | `list_artifacts`    | List artifacts produced by a workflow run                    |
-| `trigger_workflow`  | Trigger a workflow via `workflow_dispatch`                   |
+| `trigger_workflow`  | Trigger a workflow via `workflow_dispatch`                    |
 
 ## Quick Start
 
@@ -68,7 +74,7 @@ Add to `claude_desktop_config.json`:
 }
 ```
 
-### VS Code (Continue / Aider / Copilot)
+### VS Code
 
 Configure your MCP client to run:
 
@@ -76,18 +82,16 @@ Configure your MCP client to run:
 npx mcp-server-github-actions
 ```
 
-Ensure `GITHUB_TOKEN` is set in the environment (e.g. in your shell profile or client config).
+Make sure `GITHUB_TOKEN` is set in the environment (e.g. in your shell profile or client config).
 
 ## Auth
 
 Create a GitHub Personal Access Token:
 
-1. **Settings** → **Developer settings** → **Personal access tokens**
+1. **Settings** > **Developer settings** > **Personal access tokens**
 2. Choose **Fine-grained tokens** (recommended) or **Tokens (classic)**
-3. **Fine-grained**: Under "Repository access", select your repos. Under permissions, enable **Actions: Read and Write**
-4. **Classic**: Enable the `repo` scope (includes Actions)
-
-For fine-grained tokens: **Actions: Read and Write** is required for listing runs, re-running, cancelling, and triggering workflows.
+3. Fine-grained: select your repos, then enable **Actions: Read and Write**
+4. Classic: enable the `repo` scope (includes Actions)
 
 ## Example Prompts
 
@@ -98,7 +102,7 @@ For fine-grained tokens: **Actions: Read and Write** is required for listing run
 - "Cancel the currently running workflow run 11111"
 - "List artifacts from the latest run in owner/repo"
 - "Trigger the deploy.yml workflow on the staging branch for my-org/my-app"
-- "What’s the status of the most recent CI run for this project?"
+- "What's the status of the most recent CI run for this project?"
 
 ## Development
 
@@ -113,9 +117,11 @@ npm run format
 
 ## Author
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Ofer%20Shapira-0077B5?logo=linkedin)](https://www.linkedin.com/in/ofershapira)
-[![GitHub](https://img.shields.io/badge/GitHub-ofershap-181717?logo=github)](https://github.com/ofershap)
+**Ofer Shapira**
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-ofershap-blue?logo=linkedin)](https://linkedin.com/in/ofershap)
+[![GitHub](https://img.shields.io/badge/GitHub-ofershap-black?logo=github)](https://github.com/ofershap)
 
 ## License
 
-MIT
+MIT © 2026 Ofer Shapira
