@@ -27,14 +27,14 @@ GitHub's official MCP server covers repos, issues, and PRs, but it doesn't touch
 | Tool                | Description                                                  |
 | ------------------- | ------------------------------------------------------------ |
 | `list_workflows`    | List all workflow files in a repository                      |
-| `list_runs`         | List workflow runs (optionally filter by workflow or status)  |
+| `list_runs`         | List workflow runs (optionally filter by workflow or status) |
 | `get_run`           | Get details of a specific workflow run                       |
 | `get_run_logs`      | Get the logs URL for a run (zip file download)               |
 | `rerun_workflow`    | Re-run an entire workflow run                                |
 | `rerun_failed_jobs` | Re-run only the failed jobs from a run                       |
 | `cancel_run`        | Cancel an in-progress or queued run                          |
 | `list_artifacts`    | List artifacts produced by a workflow run                    |
-| `trigger_workflow`  | Trigger a workflow via `workflow_dispatch`                    |
+| `trigger_workflow`  | Trigger a workflow via `workflow_dispatch`                   |
 
 ## Quick Start
 
@@ -125,8 +125,7 @@ More MCP servers and developer tools on my [portfolio](https://gitshow.dev/ofers
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-ofershap-blue?logo=linkedin)](https://linkedin.com/in/ofershap)
 [![GitHub](https://img.shields.io/badge/GitHub-ofershap-black?logo=github)](https://github.com/ofershap)
-
-<a href="https://gitshow.dev/ofershap"><img src="https://gitshow.dev/api/og/ofershap" alt="Ofer Shapira developer portfolio - MCP servers, GitHub Actions, TypeScript libraries" width="400"></a>
+[![Portfolio](https://img.shields.io/badge/Portfolio-gitshow.dev-orange)](https://gitshow.dev/ofershap)
 
 ## License
 
